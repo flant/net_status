@@ -2,11 +2,12 @@ class NetStatus::Exception < Exception
   attr_reader :net_status
 
   def initialize(message_or_net_status=nil)
-    self.net_status = (message_or_net_status.nil? or message_or_net_status.is_a? String) ?
-        message_or_net_status :
-        { error: :error, code: :exception, message: message_or_net_status, data: { backtrace: self.backtrace } }
-    self.net_status[:data] ||= {}
-    self.net_status[:data][:backtrace] ||= self.backtrace
+    @net_status = (message_or_net_status.nil? or message_or_net_status.is_a? String) ?
+        { error: :error, code: :exception, message: message_or_net_status, data: { backtrace: self.backtrace } } :
+        message_or_net_status
+    @net_status[:data] ||= {}
+    @net_status[:data][:backtrace] ||= self.backtrace
+    super()
   end
 
   def message
