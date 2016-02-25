@@ -9,8 +9,17 @@ class NetStatus::Exception < Exception
     @net_status[:data][:backtrace] ||= self.backtrace
     super()
   end
+  
+  def net_status_short
+    net_status.dup.tap do |res|
+      if res[:data]
+        res[:data] = res[:data].dup
+        res[:data].delete(:backtrace)
+      end
+    end
+  end
 
   def message
-    self.net_status.to_s
+    net_status_short.to_s
   end
 end
