@@ -1,4 +1,4 @@
-relative "net_status/version"
+require "net_status/version"
 
-relative "net_status/exception"
-relative "net_status/mixin"
+require "net_status/exception"
+require "net_status/mixin"
