@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = NetStatus::VERSION
   spec.authors       = ["Alexey Igrychev"]
   spec.email         = ["alexey.igrychev@flant.ru"]
-  spec.summary       = 'Net status return codes'
-  spec.description   = spec.summary
+  spec.summary       = "Net status return codes"
+  spec.description   = "#{spec.summary}."
   spec.license       = "MIT"
   spec.homepage      = "https://github.com/flant/net_status"
 

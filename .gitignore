@@ -8,3 +8,4 @@
 /spec/reports/
 /tmp/
 /.idea
+/net_status*.gem
