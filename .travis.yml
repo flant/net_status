@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+- 2.2.1
+deploy:
+  provider: rubygems
+  api_key:
+    secure: ooI10ZieDzVtg3aIPN3v7HZrJsd7nOFOZ9tH0+l4p3+Nrdvtt+ycAEo5tsPk27/JY2rjkxBDFgZ5GWRlrx5Ls9Px2sGqzpf9FM9T5mM6NrgmctfGPxajAd6OybeCrp+K6wG0F/2GLINd6uoju9yviGSEyIAsN4IhU49I27Je04wwJewiC+pAtesIsaGbCJMQ9Y6XAAHETms6mv7Vnm+jVlpVm2jZIgRQBRWfZdVBjvqlP/RZrRYvXGp4Th7wAJRz4d93UlvyE4xYkPBWNWBddnMyyhWQIjy2yBQ+PF1lYVehmrkhj8lFjn8AxZYwuAjijeRuhiCCEB9kacrLm6xkkDJ4UXd383vg5gS4yCp1V6u3dAvsl4sh56coM0c8gtDZG0o7oSMvRSV1W4Xw0KIIM7JVCn1DDGYD7Mlmx+QDOGI9YQ62AioHKfoAzARwq1wB5JjjOnI/lDkHqGbswC2vHX285+t1Ve9/bu69xtMJxdgij0c//V5IaQJitSd+X5eS+t7omQC/YorBu1MletOan8mj0kSu7nFUlCelbwxe5JGvykQFShvr5y9EGCIb/cp2EcfoYvO7kqsexPcEAkE81qygQRqFnFtuNF/2pxv808PGyNAW+gb50TE7YnCNFk6VL5OD1vKfafSYTBqzsZafHSaAEyiPF+1qUI0qylv2LPU=
+  gem: net_status
+  on:
+    tags: true
+    repo: flant/net_status
