@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.version       = NetStatus::VERSION
   spec.authors       = ["Alexey Igrychev"]
   spec.email         = ["alexey.igrychev@flant.ru"]
-  spec.summary       = ''
-  spec.description   = ''
-  spec.homepage      = ''
+  spec.summary       = 'Net status return codes'
+  spec.description   = spec.summary
   spec.license       = "MIT"
+  spec.homepage      = "https://github.com/flant/net_status"
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
@@ -19,4 +19,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler', '~> 1.10'
   spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rspec', '~> 3.4', '>= 3.4.0'
+  spec.add_development_dependency 'travis', '~> 1.8', '>= 1.8.2'
 end
