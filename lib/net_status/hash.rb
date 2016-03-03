@@ -5,7 +5,7 @@ class NetStatus::Hash
     end
 
     def net_status_ok!
-      raise NetStatus::Exception, self unless net_status_ok?
+      net_status_ok? ? self : raise NetStatus::Exception, self
     end
   end
 end
