@@ -5,6 +5,10 @@ module NetStatus
         NetStatus.normalize(self, **kwargs)
       end
 
+      def net_status_error?
+        not net_status_ok?
+      end
+
       def net_status_ok?
         !(key? :error)
       end
