@@ -12,6 +12,8 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
   spec.homepage      = "https://github.com/flant/net_status"
 
+  spec.required_rubygems_version = '>= 2.5.0'
+
   spec.files         = Dir['lib/**/*']
   spec.require_paths = ["lib"]
 
