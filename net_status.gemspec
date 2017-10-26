@@ -5,14 +5,14 @@ require 'net_status/version'
 Gem::Specification.new do |spec|
   spec.name          = "net_status"
   spec.version       = NetStatus::VERSION
-  spec.authors       = ["Alexey Igrychev"]
-  spec.email         = ["alexey.igrychev@flant.ru"]
+  spec.authors       = ["Alexey Igrychev", "Timofey Kirillov"]
+  spec.email         = ["alexey.igrychev@flant.ru", "timofey.kirillov@flant.com"]
   spec.summary       = "Net status return codes"
   spec.description   = "#{spec.summary}."
   spec.license       = "MIT"
   spec.homepage      = "https://github.com/flant/net_status"
 
-  spec.files         = `git ls-files -z`.split("\x0")
+  spec.files         = Dir['lib/**/*']
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
